@@ -1,0 +1,18 @@
+@import url('./utils/variables.css');
+@import url('./utils/visually-hidden.css');
+
+@import url('./base/common.css');
+@import url('./base/container.css');
+@import url('./layout/header.css');
+@import url("./layout/home.css");
+
+@import url("./layout/task-7-1.css");
+@import url("./layout/task-7-2-1.css");
+@import url("./layout/modal-window.css");
+@import url("./layout/slider.css");
+
+@import url("./layout/task-7-2.css");
+@import url("./layout/task-7-3.css");
+@import url("./layout/task-7-4.css");
+@import url("./layout/task-7-5.css");
+@import url("./layout/task-7-6.css");

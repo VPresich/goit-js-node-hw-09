@@ -1,0 +1,1 @@
+import './js/page-task-7-5.js';
