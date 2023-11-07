@@ -6,8 +6,6 @@
 @import url('./layout/header.css');
 @import url("./layout/home.css");
 
-@import url('simplelightbox/dist/simple-lightbox.min.css');
-
 @import url("./layout/task-9-1.css");
 @import url("./layout/modal-window.css");
 @import url("./layout/slider.css");
