@@ -1,19 +1,17 @@
 // For my modal window
 import { KEY_CODE_ESC } from "./constants.js";
-
-import Slider from "./slider.js";
 import SliderInterface from "./slider-interface.js";
+import createGallery from './create-gallery.js';
+import images from "./data/gallery-images.js";
 
 const refs = {
   gallery: document.querySelector(".gallery"),
   modalBackdrop: document.querySelector(".modal-backdrop"),
   buttonClose: document.querySelector(".close-button"),
-  modalContent: document.querySelector(".modal-content"),
-  slidesList: document.querySelector(".gallery").querySelectorAll("li"),
-  prevBtn: document.getElementById("prevBtn"),
-  nextBtn: document.getElementById("nextBtn"),  
-  sliderDots: document.querySelector('.slider-dots'),
+  modalContent: document.querySelector(".modal-content"),  
 };
+
+createGallery(images, refs.gallery);
 
 refs.gallery.addEventListener("click", onImageClick);
 refs.buttonClose.addEventListener("click", onCloseModalWindow);
@@ -33,17 +31,10 @@ function onImageClick(event) {
     preview: targetRef.src,
   };
 
-  const closestLi = targetRef.closest(".gallery-item"); 
-  const indexList = Array.from(event.currentTarget.children).indexOf(closestLi);
-  
-  const sliderRef = new Slider(indexList, 1, refs.slidesList.length);
-  const sliderInterface = new SliderInterface(sliderRef,
-  refs.slidesList,
-  refs.prevBtn,
-  refs.nextBtn,
-  refs.modalContent,
-  refs.sliderDots
-  );  
+  const closestLi = targetRef.closest(".gallery-item");
+  const slidesList  = event.currentTarget.children;
+  const indexList = Array.from(slidesList).indexOf(closestLi);  
+  const sliderInterface = new SliderInterface(indexList, slidesList, refs.modalContent,);  
 
   openModalWindow(imageSrc, refs.modalContent);
 }

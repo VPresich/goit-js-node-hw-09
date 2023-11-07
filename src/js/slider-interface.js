@@ -1,20 +1,21 @@
+import Slider from "./slider.js";
+
 class SliderInterface {
     static touchThreshold = 75;
     #sliderRef;   
     constructor(
-      sliderRef,
-      elementsList,
-      prevBtn,
-      nextBtn,
-      sliderContent,
-      sliderDots
+      indexList,
+      elementsList,      
+      sliderContent,      
     ) {
-      this.#sliderRef = sliderRef;
-      this.elementsList = elementsList;
-      this.prevBtn = prevBtn;
-      this.nextBtn = nextBtn;
+      this.#sliderRef = new Slider(indexList, 1, elementsList.length);
+      this.elementsList = elementsList;     
       this.sliderContent = sliderContent;
-      (this.sliderDots = sliderDots),        
+      
+      this.prevBtn = document.getElementById("prevBtn"),
+      this.nextBtn = document.getElementById("nextBtn"),  
+      this.sliderDots = document.querySelector('.slider-dots'),
+      
       this.initBtnsFunction();
       this.initTouchFunction();
       this.createDots();

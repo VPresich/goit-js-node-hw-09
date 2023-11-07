@@ -12,7 +12,7 @@
 // і метод insertAdjacentHTML().
 
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
-
+//const galleryRef = document.querySelector(".gallery");
 // <li class="gallery-item">
 //   <a class="gallery-link" href="large-image.jpg">
 //     <img
@@ -31,34 +31,17 @@
 // Зверни увагу на те, що зображення огорнуте посиланням,
 // отже, по кліку на нього за замовчуванням користувач буде перенаправлений на іншу
 // сторінку, куди вказує href. Заборони цю поведінку за замовчуванням.
+
+
 //=====================================================================================
 
-import images from "./data/gallery-images.js";
+//import images from "./data/gallery-images.js";
+// galleryRef = document.querySelector(".gallery");
 
-const galleryRef = document.querySelector(".gallery");
-
-const createGallery = (images) => {
-  return images
-    .map(({ preview, description, original }) => {
-      return `<li class="gallery-item">
-            <a class="gallery-link" href="large-image.jpg">
-              <img class="gallery-img"
-                  src="${preview}"
-                  alt="${description}"
-                  data-source="${original}"
-               />
-            </a>
-          </li>`;
-    })
-    .join("");
-};
-
-const imagesMarkup = createGallery(images);
-galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
-
-// ===========================================================
-// function imageMarkup({ preview, description, original }) {
-//   return `<li class="gallery-item">
+// const createGallery = (images) => {
+//   return images
+//     .map(({ preview, description, original }) => {
+//       return `<li class="gallery-item">
 //             <a class="gallery-link" href="large-image.jpg">
 //               <img class="gallery-img"
 //                   src="${preview}"
@@ -67,9 +50,28 @@ galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
 //                />
 //             </a>
 //           </li>`;
-// }
+//     })
+//     .join("");
+// };
 
-// function createGallery(images) {
-//   return images.map(imageMarkup).join("");
-// }
-// =========================================================
+// const imagesMarkup = createGallery(images);
+// galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
+
+// ==================================================================
+
+const imageMarkup = ({ preview, description, original }) => {
+  return `<li class="gallery-item">
+            <a class="gallery-link" href="large-image.jpg">
+              <img class="gallery-img"
+                  src="${preview}"
+                  alt="${description}"
+                  data-source="${original}"
+               />
+            </a>
+          </li>`;
+}
+
+export default function createGallery(images, galleryRef) {
+  const imagesMarkup = images.map(imageMarkup).join('');
+  galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
+}
