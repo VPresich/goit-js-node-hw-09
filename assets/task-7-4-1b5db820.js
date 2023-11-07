@@ -1,0 +1,1 @@
+import"./styles-d2f97821.js";document.querySelector(".login-form").addEventListener("submit",s);function s(t){t.preventDefault();const e=t.target,l=e.elements.email.value,o=e.elements.password.value;l===""||o===""?alert("All fields must be filled!"):(console.log({email:l,password:o}),e.reset())}
