@@ -26,7 +26,7 @@ function onImageClick(event) {
   openModalWindow(imageSrc);
 }
 
-const lightBox = new SimpleLightbox('.gallery-lightbox a');
+const lightBox = new SimpleLightbox();
 
 lightBox.on('open.simplelightbox', () => {
   document.addEventListener('keydown', onKeydown);
