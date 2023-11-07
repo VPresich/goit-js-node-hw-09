@@ -1,4 +1,4 @@
-import SimpleLightbox from 'simplelightbox';
+// import SimpleLightbox from 'simplelightbox';
 
 import { KEY_CODE_ESC } from './constants.js';
 
@@ -26,24 +26,24 @@ function onImageClick(event) {
   openModalWindow(imageSrc);
 }
 
-const lightBox = new SimpleLightbox();
+// const lightBox = new SimpleLightbox();
 
-lightBox.on('open.simplelightbox', () => {
-  document.addEventListener('keydown', onKeydown);
-});
+// lightBox.on('open.simplelightbox', () => {
+//   document.addEventListener('keydown', onKeydown);
+// });
 
-lightBox.on('close.simplelightbox', () => {
-  document.removeEventListener('keydown', onKeydown);
- });
+// lightBox.on('close.simplelightbox', () => {
+//   document.removeEventListener('keydown', onKeydown);
+//  });
 
 function openModalWindow(imageSrc) { 
   console.table(imageSrc);
-  console.table('lightBox', lightBox); 
-  lightBox.open({src: imageSrc.src, alt: imageSrc.alt});
+  
+  // lightBox.open({src: imageSrc.src, alt: imageSrc.alt});
 }
 
-function onKeydown(event) {
-  if (event.code === KEY_CODE_ESC) {
-    lightBox.close();
-  }
-}
+// function onKeydown(event) {
+//   if (event.code === KEY_CODE_ESC) {
+//     lightBox.close();
+//   }
+// }
