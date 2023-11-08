@@ -1,9 +1,10 @@
-// import SimpleLightbox from 'simplelightbox';
+
+import * as basicLightbox from 'basiclightbox';
 
 import { KEY_CODE_ESC } from './constants.js';
 
 import createGallery from './create-gallery.js';
-import images from "./data/gallery-images.js";
+import images from './data/gallery-images.js';
 
 const galleryRef = document.querySelector('.gallery-lightbox');
 createGallery(images, galleryRef);
@@ -21,29 +22,32 @@ function onImageClick(event) {
     src: targetRef.dataset.source,
     alt: targetRef.alt,
     preview: targetRef.src,
-  }; 
+  };
 
   openModalWindow(imageSrc);
 }
 
-// const lightBox = new SimpleLightbox();
+let modalWindowRef = null;
 
-// lightBox.on('open.simplelightbox', () => {
-//   document.addEventListener('keydown', onKeydown);
-// });
-
-// lightBox.on('close.simplelightbox', () => {
-//   document.removeEventListener('keydown', onKeydown);
-//  });
-
-function openModalWindow(imageSrc) { 
-  console.table(imageSrc);
-  
-  // lightBox.open({src: imageSrc.src, alt: imageSrc.alt});
+function openModalWindow({ src, alt }) {
+  modalWindowRef = basicLightbox.create(
+    `<div class = "modal">
+      <img src="${src}" alt="${alt}"/>        
+    </div>`,
+    {
+      onShow: () => {
+        document.addEventListener('keydown', onKeydown);
+      },
+      onClose: () => {
+        document.removeEventListener('keydown', onKeydown);
+      },
+    }
+  );
+  modalWindowRef.show();
 }
 
-// function onKeydown(event) {
-//   if (event.code === KEY_CODE_ESC) {
-//     lightBox.close();
-//   }
-// }
+function onKeydown(event) {
+  if (event.code === KEY_CODE_ESC) {
+    modalWindowRef.close();
+  }
+}
