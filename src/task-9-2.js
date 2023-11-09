@@ -1,1 +1,1 @@
-import '/js/lightbox-handles.js';
+import './js/lightbox-handles.js';
