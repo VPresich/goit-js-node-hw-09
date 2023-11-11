@@ -70,7 +70,7 @@ function createLightboxMarkup() {
         id="id-lightbox-close"
       >
         <svg class="lightbox-close-icon" width="16" height="16">
-          <use href="./img/icons.svg#close-form"></use>
+          <use href="../img/icons.svg#close-form"></use>
         </svg>
       </button>
       <div class="lightbox-slider">
@@ -85,7 +85,7 @@ function createLightboxMarkup() {
             height="24"
             aria-label="icon arrow left"
           >
-            <use href="./img/icons.svg#icon-chevron-left"></use>
+            <use href="../img/icons.svg#icon-chevron-left"></use>
           </svg>
         </button>
 
