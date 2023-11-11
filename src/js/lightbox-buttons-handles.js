@@ -85,7 +85,7 @@ function createLightboxMarkup() {
             height="24"
             aria-label="icon arrow left"
           >
-            <use href="../img/icons.svg#icon-chevron-left"></use>
+            <use href="/img/icons.svg#icon-chevron-left"></use>
           </svg>
         </button>
 
