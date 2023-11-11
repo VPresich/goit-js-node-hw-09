@@ -7,7 +7,7 @@ var c=(t,i,e)=>{if(!i.has(t))throw TypeError("Cannot "+e)};var o=(t,i,e)=>(c(t,i
         id="id-lightbox-close"
       >
         <svg class="lightbox-close-icon" width="16" height="16">
-          <use href="../img/icons.svg#close-form"></use>
+          <use href="/img/icons.svg#close-form"></use>
         </svg>
       </button>
       <div class="lightbox-slider">
@@ -38,7 +38,7 @@ var c=(t,i,e)=>{if(!i.has(t))throw TypeError("Cannot "+e)};var o=(t,i,e)=>(c(t,i
             height="24"
             aria-label="icon arrow right"
           >
-            <use href="./img/icons.svg#icon-chevron-right"></use>
+            <use href="/img/icons.svg#icon-chevron-right"></use>
           </svg> 
         </button>
       </div>
