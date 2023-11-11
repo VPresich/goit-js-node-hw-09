@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 2 task 2-1</title>
+    <title>Module 9 Gallery 1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +17,10 @@
     />
       
   
-  <script type="module" crossorigin src="/goit-js-node-hw-09/assets/task-9-1-6d6571b3.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/gallery-images-3457a5d6.js">
-  <link rel="stylesheet" href="/goit-js-node-hw-09/assets/styles-188d773e.css">
+  <script type="module" crossorigin src="/goit-js-node-hw-09/assets/task-9-1-d595d0e9.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/gallery-images-73c5bd40.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/slider-cf729ea8.js">
+  <link rel="stylesheet" href="/goit-js-node-hw-09/assets/styles-22fd7d46.css">
 
   <body>
     <header class="header-page">
@@ -31,14 +32,19 @@
       </li>      
       <li class="site-navigation-item">
         <a class="site-navigation-item-link" href="./task-9-1.html"
-          >task2 Gallery-1</a
+          >task1 Gallery-1</a
         >
       </li>
       <li class="site-navigation-item">
         <a class="site-navigation-item-link" href="./task-9-2.html"
-          >task2 - Gallery-2</a
+          >task1 - Gallery-2</a
         >
-      </li>      
+      </li>  
+      <li class="site-navigation-item">
+        <a class="site-navigation-item-link" href="./task-9-3.html"
+          >task1 - Gallery-3</a
+        >
+      </li>          
     </ul>
   </nav>
   </div>
@@ -46,8 +52,8 @@
 
     <section class="section">
   <div class="container">
-    <h2 class="section-title visually-hidden" id="first-gallery">
-      First gallery with my modal window
+    <h2 class="section-title visually-hidden" id="secondary-gallery">
+      Gallery for lightbox with buttons
     </h2>
 
     <ul class="gallery"></ul>
@@ -58,22 +64,22 @@
 <div class="modal-backdrop" id="id-modal-backdrop">
   <div class="modal-window">
     <button class="close-button" type="button" id="id-close-button">
-      <svg class="close-icon" width="8" height="8">
-        <use href="/goit-js-node-hw-09/assets/icons-c508bcec.svg#close-form"></use>
+      <svg class="close-icon" width="16" height="16">
+        <use href="/goit-js-node-hw-09/assets/icons-8ee028ff.svg#close-form"></use>
       </svg>
     </button>
-    <img id="modal-image" class="modal-content" src="" alt="" />
-    <div class="slider-container">
+    <img class="modal-content" src="" alt="" />
+
+    <div class="slider-buttons">            
+      <button class="slider-button" id="prevBtn">Previous</button>
       <div class="slider-dots"></div>
-      <div class="buttons-slider">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-      </div>
+      <span class="slider-counter"></span>  
+      <button class="slider-button" id="nextBtn">Next</button>
+      <button class="slider-button" id="closeBtn">Close</button>
     </div>
   </div>
 </div>
 <!-- ===================Modal backdrop =========================-->
-
     
     
   </body>

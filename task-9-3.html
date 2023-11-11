@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-node-hw-09/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VA home work JS 7</title>
-
+    <title>Module 9 Gallery 3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +14,14 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
-    />
-        
+    />   
+       
+
+    <script type="module" crossorigin src="/goit-js-node-hw-09/assets/task-9-3-6d524c82.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/gallery-images-73c5bd40.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/basicLightbox.min-29bcc645.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-node-hw-09/assets/slider-cf729ea8.js">
+    <link rel="stylesheet" href="/goit-js-node-hw-09/assets/basicLightbox-b3ce9496.css">
     <link rel="stylesheet" href="/goit-js-node-hw-09/assets/styles-22fd7d46.css">
   </head>
   <body>
@@ -47,14 +52,18 @@
   </div>
 </header>
 
-    <section class="section section-layout">
-  <div class="container home-page-container">
-    <h1 class="title-home">Домашня робота JS - 9</h1>
-    <h2 class="name-stud">Валентина Александрова</h2>
+    <main>
+      <section class="section">
+  <div class="container">
+    <h2 class="section-title visually-hidden" id="secondary-gallery">
+      Gallery for lightbox with buttons
+    </h2>
+
+    <ul class="gallery"></ul>
+    
   </div>
 </section>
-
-
-    <!-- <script type="module" src="/main.js"> </script> -->
+    </main>
+       
   </body>
 </html>
