@@ -3,13 +3,12 @@ import * as basicLightbox from 'basiclightbox';
 import "basiclightbox/dist/basicLightbox.min.css";
 
 import { KEY_CODE_ESC } from './constants.js';
-
 import createGallery from './create-gallery.js';
 import images from "./data/gallery-images.js";
 
  let modalWindowRef = {};
 
-const galleryRef = document.querySelector('.gallery-lb');
+const galleryRef = document.querySelector('.gallery');
 createGallery(images, galleryRef);
 galleryRef.addEventListener('click', onImageClick);
 
@@ -34,8 +33,8 @@ function onImageClick(event) {
 function openModalWindow({ src, alt }) {  
 
   modalWindowRef = basicLightbox.create(
-    `<div class = "modal">
-      <img src="${src}" alt="${alt}"/>        
+    `<div class="lightbox-modal ">   
+        <img class="lightbox-image" src="${src}" alt="${alt}"/>           
     </div>`,
     {
       onShow: () => {

@@ -38,16 +38,21 @@ img {
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--body-color);
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: var(--body-bgr-color);
 }
 
 .section {
   padding-top: 50px;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 
 .section-title {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
