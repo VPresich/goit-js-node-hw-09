@@ -12,7 +12,7 @@
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 
 // Import array of images
-import images from "./data/images.js";
+import images from "../data/images.js";
 
 const galleryRef = document.querySelector(".gallery2");
 

@@ -1,4 +1,4 @@
-import Slider from "./slider.js";
+import Slider from "../common/slider.js";
 
 class LightboxSliderInterface {
   #sliderRef;

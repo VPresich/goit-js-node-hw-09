@@ -1,1 +1,0 @@
-import './js/modal-window-handles.js';

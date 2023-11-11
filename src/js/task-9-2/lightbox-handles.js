@@ -2,9 +2,9 @@
 import * as basicLightbox from 'basiclightbox';
 import "basiclightbox/dist/basicLightbox.min.css";
 
-import { KEY_CODE_ESC } from './constants.js';
-import createGallery from './create-gallery.js';
-import images from "./data/gallery-images.js";
+import { KEY_CODE_ESC } from '../common/constants.js';
+import createGallery from '../common/create-gallery.js';
+import images from "../data/gallery-images.js";
 
  let modalWindowRef = {};
 

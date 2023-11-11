@@ -1,8 +1,8 @@
 // For my modal window
-import { KEY_CODE_ESC } from "./constants.js";
+import { KEY_CODE_ESC } from "../common/constants.js";
 import SliderInterface from "./slider-interface.js";
-import createGallery from './create-gallery.js';
-import images from "./data/gallery-images.js";
+import createGallery from '../common/create-gallery.js';
+import images from "../data/gallery-images.js";
 
 const refs = {
   gallery: document.querySelector('.gallery'),

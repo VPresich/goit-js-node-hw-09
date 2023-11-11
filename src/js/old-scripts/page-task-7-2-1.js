@@ -11,7 +11,7 @@
 
 // Імпорт вхідних даних з іншого файлу
 
-import images from './data/photos.js';
+import images from '../data/photos.js';
 
 const galleryRef = document.querySelector('.gallery');
 

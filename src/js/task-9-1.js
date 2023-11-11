@@ -1,0 +1,1 @@
+import './task-9-1/modal-window-handles.js';
