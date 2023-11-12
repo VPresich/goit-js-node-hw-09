@@ -3,8 +3,7 @@ import Slider from "../common/slider.js";
 class SliderInterface {
   static touchThreshold = 75;
   constructor(indexList, elementsList, sliderContent) {
-    this.sliderRef = new Slider(indexList, 1, elementsList.length);
-    console.log(this.sliderRef);
+    this.sliderRef = new Slider(indexList, 1, elementsList.length);   
     this.touchStartX = 0;
     this.prevBtn = document.getElementById("prevBtn");
     this.nextBtn = document.getElementById("nextBtn");
@@ -68,8 +67,7 @@ class SliderInterface {
     this.sliderDots.addEventListener("click", (event) => {
       const dot = event.target;
       if (dot.classList.contains("slider-dot")) {
-        const index = parseInt(dot.dataset.index, 10);
-        console.log(index);
+        const index = parseInt(dot.dataset.index, 10);      
         this.sliderRef.goToSlide(index);
         this.update();
       }
@@ -108,8 +106,7 @@ class SliderInterface {
   }
 
   updateCounter(){
-    this.slidesCounter.textContent = `${this.sliderRef.currentSlide + 1 + '/' + this.elementsList.length}`;   
-    console.log(this.slidesCounter.textContent); 
+    this.slidesCounter.textContent = `${this.sliderRef.currentSlide + 1 + '/' + this.elementsList.length}`;       
   }  
 }
 

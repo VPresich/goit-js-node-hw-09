@@ -6,7 +6,8 @@ import { KEY_CODE_ESC } from '../common/constants.js';
 import createGallery from '../common/create-gallery.js';
 import images from "../data/gallery-images.js";
 
-import LightboxSliderInterface from "./lightbox-slider-interface.js";
+import LightboxSliderInterface from './lightbox-slider-interface.js';
+import iconsUrl from '../../img/icons.svg';
 
 const galleryRef = document.querySelector('.gallery');
 createGallery(images, galleryRef);
@@ -70,7 +71,7 @@ function createLightboxMarkup() {
         id="id-lightbox-close"
       >
         <svg class="lightbox-close-icon" width="16" height="16">
-          <use href="/img/icons.svg#close-form"></use>
+          <use href="${iconsUrl}#close-form"></use>
         </svg>
       </button>
       <div class="lightbox-slider">
@@ -85,7 +86,7 @@ function createLightboxMarkup() {
             height="24"
             aria-label="icon arrow left"
           >
-            <use href="/img/icons.svg#icon-chevron-left"></use>
+            <use href="${iconsUrl}#icon-chevron-left"></use>
           </svg>
         </button>
 
@@ -101,7 +102,7 @@ function createLightboxMarkup() {
             height="24"
             aria-label="icon arrow right"
           >
-            <use href="/img/icons.svg#icon-chevron-right"></use>
+            <use href="${iconsUrl}#icon-chevron-right"></use>
           </svg> 
         </button>
       </div>

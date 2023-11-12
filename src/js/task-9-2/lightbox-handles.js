@@ -45,10 +45,7 @@ function openModalWindow({ src, alt }) {
       },
       closable: true,
     }
-  );
-  
-  modalWindowRef.show(() => console.log('lightbox now visible'));
-  console.log(modalWindowRef);
+  ); 
 }
 
 function onKeydown(event) {
