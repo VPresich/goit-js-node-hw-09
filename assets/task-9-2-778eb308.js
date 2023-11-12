@@ -1,3 +1,0 @@
-import"./styles-ec282632.js";import{b as a}from"./basicLightbox.min-29bcc645.js";import{c as l,i as c,K as r}from"./gallery-images-e4621d11.js";let t={};const n=document.querySelector(".gallery");l(c,n);n.addEventListener("click",m);function m(e){const o=e.target;if(!o.classList.contains("gallery-img"))return;e.preventDefault();const s={src:o.dataset.source,alt:o.alt,preview:o.src};d(s)}function d({src:e,alt:o}){t=a.create(`<div class="lightbox-modal ">   
-        <img class="lightbox-image" src="${e}" alt="${o}"/>           
-    </div>`,{onShow:()=>{document.addEventListener("keydown",i)},onClose:()=>{document.removeEventListener("keydown",i)},closable:!0}),t.show(()=>console.log("lightbox now visible")),console.log(t)}function i(e){e.code===r&&t.close()}
