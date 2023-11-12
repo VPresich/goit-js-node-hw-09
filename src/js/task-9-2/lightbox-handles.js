@@ -46,6 +46,7 @@ function openModalWindow({ src, alt }) {
       closable: true,
     }
   ); 
+  modalWindowRef.show();
 }
 
 function onKeydown(event) {
