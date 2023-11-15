@@ -1,9 +1,9 @@
 class Slider {
-  #currentSlide = 0;
-  #slidesPerPage = 1;
-  #slidesNumber = 0;
+  #currentSlide;
+  #slidesPerPage;
+  #slidesNumber;
   #slides;
-  constructor(currentSlide, slidesPerPage, slidesNumber = 0) {
+  constructor(currentSlide, slidesPerPage, slidesNumber) {
     this.#currentSlide = currentSlide;
     this.#slidesPerPage = slidesPerPage;
     this.#slidesNumber = slidesNumber;
@@ -28,6 +28,14 @@ class Slider {
 
   set currentSlide(newCurrentSlide) {
     return (this.#currentSlide = newCurrentSlide);
+  }
+
+  get slidesNumber() {
+    return this.#slidesNumber;
+  }
+
+  set slidesNumber(newSlidesNumber) {
+    return (this.#slidesNumber = newSlidesNumber);
   }
 
   setSlidesProperty() {
@@ -70,7 +78,7 @@ class Slider {
       this.#slides.forEach((slide) => {
         slide.offset -= delta;
       });
-    }      
+    }
     this.setSlidesProperty();
   }
 

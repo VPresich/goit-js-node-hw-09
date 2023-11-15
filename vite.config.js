@@ -8,7 +8,7 @@ export default defineConfig({
    define: {
     global: {},
   },
-  root: 'src',
+  root: path.resolve(__dirname, 'src'),
   build: {
     rollupOptions: {
       input: glob.sync('./src/*.html'),
